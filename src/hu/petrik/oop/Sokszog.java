@@ -16,4 +16,13 @@ public abstract class Sokszog {
     }
 
     public abstract void SetA(double a);
+
+    public abstract double getKerulet();
+
+    public abstract double getTerulet();
+
+    @Override
+    public String toString() {
+        return String.format("K = %-15.3f - T = %-15.3f", this.getKerulet(), this.getTerulet());
+    }
 }

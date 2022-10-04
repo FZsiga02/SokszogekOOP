@@ -1,6 +1,6 @@
 package hu.petrik.oop;
 
-public abstract class Teglalap extends Sokszog {
+public class Teglalap extends Sokszog {
     private double b;
 
     public Teglalap(double a, double b) {
@@ -14,6 +14,11 @@ public abstract class Teglalap extends Sokszog {
 
     public void setB(double b) {
         this.b = b;
+    }
+
+    @Override
+    public void SetA(double a) {
+
     }
 
     public double getKerulet() {
