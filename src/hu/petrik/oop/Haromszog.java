@@ -24,6 +24,17 @@ public class Haromszog extends Sokszog {
 
     public void setC(double c) {
         this.c = c;
+        if (!this.isSzerkesztheto()){
+            throw new IllegalArgumentException("A megadott háromszög nem szerkeszthető");
+        }
+    }
+
+    @Override
+    public void SetA(double a){
+        super.setA(a);
+        if (!this.isSzerkesztheto()){
+            throw new IllegalArgumentException("A megadott háromszög nem szerkeszthető");
+        }
     }
 
     private boolean isSzerkesztheto() {
@@ -49,6 +60,7 @@ public class Haromszog extends Sokszog {
 
     @Override
     public String toString() {
-        return "";
+        return String.format("Háromszög: a = %f - b = %f - c = %f - K = %f - T = %f",
+                this.getA(), this,getB(), this.getC(), this.getKerulet(), this.getTerulet());
     }
 }

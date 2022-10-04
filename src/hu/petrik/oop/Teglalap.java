@@ -1,6 +1,6 @@
 package hu.petrik.oop;
 
-public class Teglalap extends Sokszog {
+public abstract class Teglalap extends Sokszog {
     private double b;
 
     public Teglalap(double a, double b) {

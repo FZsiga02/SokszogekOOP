@@ -1,6 +1,6 @@
 package hu.petrik.oop;
 
-public class Sokszog {
+public abstract class Sokszog {
     private double a;
 
     public Sokszog(double a) {
@@ -14,4 +14,6 @@ public class Sokszog {
     public void setA(double a) {
         this.a = a;
     }
+
+    public abstract void SetA(double a);
 }
