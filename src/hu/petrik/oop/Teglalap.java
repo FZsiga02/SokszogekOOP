@@ -16,11 +16,6 @@ public class Teglalap extends Sokszog {
         this.b = b;
     }
 
-    @Override
-    public void SetA(double a) {
-
-    }
-
     public double getKerulet() {
         /*
         Jelenleg super.getA() is ugyan azt eredményezi

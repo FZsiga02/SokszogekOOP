@@ -15,8 +15,6 @@ public abstract class Sokszog {
         this.a = a;
     }
 
-    public abstract void SetA(double a);
-
     public abstract double getKerulet();
 
     public abstract double getTerulet();

@@ -8,9 +8,9 @@ public class Haromszog extends Sokszog {
         super(getVeletlenOldal());
         this.b = getVeletlenOldal();
         this.c = getVeletlenOldal();
-        while (isSzerkesztheto()){
+        while (!isSzerkesztheto()){
             super.setA(getVeletlenOldal());
-            this.b = getC();
+            this.b = getVeletlenOldal();
             this.c = getVeletlenOldal();
         }
     }
@@ -45,7 +45,7 @@ public class Haromszog extends Sokszog {
     }
 
     @Override
-    public void SetA(double a) {
+    public void setA(double a) {
         super.setA(a);
         if (!this.isSzerkesztheto()) {
             throw new IllegalArgumentException("A megadott háromszög nem szerkeszthető");
@@ -54,7 +54,9 @@ public class Haromszog extends Sokszog {
 
     private boolean isSzerkesztheto() {
         boolean szerkesztheto = true;
-        if ((this.getA() * this.b) <= this.getC() || (this.getA() * this.getC()) <= this.getB() || (this.getB() * this.getC()) <= this.getA()) {
+        if ((this.getA() + this.b) <= this.getC() ||
+                (this.getA() + this.getC()) <= this.getB() ||
+                (this.getB() + this.getC()) <= this.getA()) {
             szerkesztheto = false;
         }
         return szerkesztheto;
@@ -76,6 +78,6 @@ public class Haromszog extends Sokszog {
     @Override
     public String toString() {
         return String.format("Háromszög: a = %f - b = %f - c = %f - K = %f - T = %f",
-                this.getA(), this, getB(), this.getC(), this.getKerulet(), this.getTerulet());
+                this.getA(), this.getB(), this.getC(), this.getKerulet(), this.getTerulet());
     }
 }
