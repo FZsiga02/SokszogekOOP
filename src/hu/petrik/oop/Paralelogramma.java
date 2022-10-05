@@ -1,31 +1,32 @@
 package hu.petrik.oop;
 
 public class Paralelogramma extends Teglalap{
-    private double szog;
+    private double magassag;
 
-    public Paralelogramma(double a, double b, double szog) {
+    public Paralelogramma(double a, double b, double magassag) {
         super(a, b);
-        this.szog = szog;
+        this.magassag = magassag;
     }
 
-    public double getSzog() {
-        return szog;
+    public double getMagassag() {
+        return magassag;
     }
 
-    public void setSzog(double szog) {
-        this.szog = szog;
+    public void setMagassag(double magassag) {
+        this.magassag = magassag;
     }
 
     public double getKerulet(){
-
+        return this.getA()*this.magassag;
     }
 
     public double getTerulet(){
-
+        return 2 * (this.getA() + this.getB());
     }
 
     @Override
     public String toString() {
-        return "";
+        return String.format("Paralelogramma: a = %f - b = %f - m = %s",
+                this.getA(), this.getB(), super.toString());
     }
 }
