@@ -3,7 +3,7 @@ package hu.petrik.oop;
 public class Paralelogramma extends Teglalap{
     private double magassag;
 
-    public Paralelogramma(double a, double b, double magassag) {
+    public Paralelogramma(double a, double b, double maggassag) {
         super(a, b);
         this.magassag = magassag;
     }
